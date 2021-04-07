@@ -15,6 +15,7 @@
   width: 100px;
   height: 100px;
   cursor: pointer;
+  z-index: 100;
   /*background-color: red;*/
 }
 
@@ -60,5 +61,56 @@
 }
 
 #nav-menu {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $white-color;
+  z-index: -111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+}
+
+div a {
+  text-decoration: none;
+  color: white;
+}
+
+.expanded-menu {
+  position: relative;
+  font-size: $big-font-size;
+  background-color: $secondary-color;
+  animation: dropDown 1s ease-in-out forwards;
+  margin-bottom: 5rem;
+  z-index: -1;
+}
+
+@keyframes nav-expansion {
+  0% {
+    width: 0vw;
+    height: 0vh;
+    z-index: -1;
+  }
+
+  100% {
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+  }
+}
+
+@keyframes nav-expansion-reverse {
+  100% {
+    height: 0vh;
+    width: 0vw;
+    z-index: -1;
+  }
+
+  0% {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+  }
 }
