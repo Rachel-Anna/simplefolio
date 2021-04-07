@@ -1,0 +1,64 @@
+#nav {
+  background-color: $primary-color;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  /*background-color: red;*/
+}
+
+#line1,
+#line2,
+#line3 {
+  background-color: black;
+  width: 3.2rem;
+  height: 0.3rem;
+  margin-bottom: 5px;
+}
+
+.toggle-on #line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  transition: transform 0.75s ease-in-out;
+}
+
+.toggle-on #line2 {
+  opacity: 0;
+  // transition: opacity 0.75s ease-in-out;
+}
+
+.toggle-on #line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  transition: transform 0.75s ease-in-out;
+}
+
+/* OFF */
+
+.toggle-off #line1 {
+  transform: rotate(0deg) translate(0px, 0px);
+  transition: transform 0.75s ease-in-out;
+}
+
+.toggle-off #line2 {
+  opacity: 1;
+  transition: opacity 0.75s ease-in-out;
+}
+
+.toggle-off #line3 {
+  transform: rotate(0deg) translate(0px, 0px);
+  transition: transform 0.75s ease-in-out;
+}
+
+#nav-menu {
+  display: none;
+}
