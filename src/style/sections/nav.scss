@@ -1,0 +1,116 @@
+#nav {
+  background-color: $primary-color;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  z-index: 100;
+  /*background-color: red;*/
+}
+
+#line1,
+#line2,
+#line3 {
+  background-color: black;
+  width: 3.2rem;
+  height: 0.3rem;
+  margin-bottom: 5px;
+}
+
+.toggle-on #line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  transition: transform 0.75s ease-in-out;
+}
+
+.toggle-on #line2 {
+  opacity: 0;
+  // transition: opacity 0.75s ease-in-out;
+}
+
+.toggle-on #line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  transition: transform 0.75s ease-in-out;
+}
+
+/* OFF */
+
+.toggle-off #line1 {
+  transform: rotate(0deg) translate(0px, 0px);
+  transition: transform 0.75s ease-in-out;
+}
+
+.toggle-off #line2 {
+  opacity: 1;
+  transition: opacity 0.75s ease-in-out;
+}
+
+.toggle-off #line3 {
+  transform: rotate(0deg) translate(0px, 0px);
+  transition: transform 0.75s ease-in-out;
+}
+
+#nav-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $white-color;
+  z-index: -111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+}
+
+div a {
+  text-decoration: none;
+  color: white;
+}
+
+.expanded-menu {
+  position: relative;
+  font-size: $big-font-size;
+  background-color: $secondary-color;
+  animation: dropDown 1s ease-in-out forwards;
+  margin-bottom: 5rem;
+  z-index: -1;
+}
+
+@keyframes nav-expansion {
+  0% {
+    width: 0vw;
+    height: 0vh;
+    z-index: -1;
+  }
+
+  100% {
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+  }
+}
+
+@keyframes nav-expansion-reverse {
+  100% {
+    height: 0vh;
+    width: 0vw;
+    z-index: -1;
+  }
+
+  0% {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+  }
+}
