@@ -51,6 +51,7 @@
 
     &__image {
       width: 90%;
+      height: auto;
       margin: 0 auto;
 
       @include respond(tab-land) {
