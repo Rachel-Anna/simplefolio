@@ -33,7 +33,7 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2",
-    "ssri": ">=8.0.1",
+    "ssri": ">=6.0.2",
     "is-svg": ">=4.2.2"
   },
   "dependencies": {
